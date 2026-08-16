@@ -1,0 +1,142 @@
+.adminPage {
+  padding: var(--space-xl);
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+.pageHeader h1 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.dataTableWrapper {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dataTable th, .dataTable td {
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+.dataTable th {
+  background: var(--color-cream);
+  font-weight: var(--fw-semibold);
+  color: var(--color-dark-text);
+  white-space: nowrap;
+}
+
+.dataTable tr:hover {
+  background-color: var(--color-off-white);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.formLabel {
+  font-weight: var(--fw-semibold);
+  color: var(--color-dark-text);
+  font-size: var(--fs-small);
+}
+
+.formInput, .formTextarea, .formSelect {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-light-grey);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  transition: border-color var(--transition-fast);
+}
+
+.formInput:focus, .formTextarea:focus, .formSelect:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.formTextarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formCheckbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+}
+
+.formCheckbox input {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+
+.statusActive, .statusApproved, .statusCompleted {
+  background: var(--color-success-light, #e6f4ea);
+  color: var(--color-success, #1e8e3e);
+}
+
+.statusPending, .statusInProgress {
+  background: var(--color-warning-light, #fef7e0);
+  color: var(--color-warning, #f29900);
+}
+
+.statusInactive, .statusRejected {
+  background: var(--color-error-light, #fce8e6);
+  color: var(--color-error, #d93025);
+}
+
+.emptyState {
+  padding: var(--space-3xl);
+  text-align: center;
+  color: var(--color-muted-text);
+}

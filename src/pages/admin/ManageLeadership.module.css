@@ -1,0 +1,13 @@
+/* Specific styles for ManageLeadership, mostly uses shared styles */
+.photoPreview {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+}
+
+.uploadContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}

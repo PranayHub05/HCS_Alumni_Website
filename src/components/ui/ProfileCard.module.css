@@ -1,0 +1,182 @@
+.card {
+  background-color: var(--color-white, #FFFFFF);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+  overflow: hidden;
+  transition: all var(--transition-base, 250ms);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover, 0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-xl, 2rem) var(--space-md, 1rem) 0;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full, 50%);
+  object-fit: cover;
+  border: 4px solid var(--color-white, #FFFFFF);
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.1));
+}
+
+.avatarPlaceholder {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full, 50%);
+  background-color: var(--color-primary, #6B1D2A);
+  color: var(--color-gold, #C9A84C);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: var(--fs-h2, 2.25rem);
+  border: 4px solid var(--color-white, #FFFFFF);
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.1));
+}
+
+.body {
+  padding: var(--space-lg, 1.5rem);
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: var(--fs-h3, 1.5rem);
+  color: var(--color-dark-text, #1A1A1A);
+  margin-bottom: var(--space-2xs, 0.25rem);
+}
+
+.designation {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: var(--fs-small, 0.875rem);
+  color: var(--color-gold, #C9A84C);
+  font-weight: 600;
+  margin-bottom: var(--space-md, 1rem);
+}
+
+.tributeText {
+  font-style: italic;
+  color: var(--color-muted-text, #6B6B6B);
+  font-size: var(--fs-small, 0.875rem);
+  margin-bottom: var(--space-md, 1rem);
+}
+
+.details {
+  background-color: var(--color-cream, #F5F0EB);
+  border-radius: var(--radius-md, 10px);
+  padding: var(--space-md, 1rem);
+  margin-bottom: var(--space-md, 1rem);
+  text-align: left;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs, 0.5rem);
+  font-size: var(--fs-small, 0.875rem);
+}
+
+.detailRow:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  color: var(--color-muted-text, #6B6B6B);
+  font-weight: 500;
+}
+
+.value {
+  color: var(--color-body-text, #3D3D3D);
+  font-weight: 600;
+}
+
+.bioContainer {
+  margin-bottom: var(--space-md, 1rem);
+  text-align: left;
+}
+
+.bio {
+  color: var(--color-body-text, #3D3D3D);
+  font-size: var(--fs-small, 0.875rem);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all var(--transition-base, 250ms);
+}
+
+.bio.expanded {
+  -webkit-line-clamp: unset;
+}
+
+.readMoreBtn {
+  background: none;
+  border: none;
+  color: var(--color-primary, #6B1D2A);
+  font-weight: 600;
+  font-size: var(--fs-xs, 0.75rem);
+  padding: var(--space-xs, 0.5rem) 0 0;
+  cursor: pointer;
+  display: block;
+}
+
+.readMoreBtn:hover {
+  text-decoration: underline;
+}
+
+.socials {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm, 0.5rem);
+}
+
+.socials a {
+  color: var(--color-muted-text, #6B6B6B);
+  font-size: var(--fs-body, 1rem);
+  transition: color var(--transition-fast, 150ms);
+}
+
+.socials a:hover {
+  color: var(--color-primary, #6B1D2A);
+}
+
+/* Leadership Variant */
+.leadership {
+  border-top: 4px solid var(--color-gold, #C9A84C);
+}
+
+.leadership .photo {
+  width: 140px;
+  height: 140px;
+  border-color: var(--color-gold, #C9A84C);
+}
+
+.leadership .avatarPlaceholder {
+  width: 140px;
+  height: 140px;
+  border-color: var(--color-gold, #C9A84C);
+}
+
+/* Teacher Variant */
+.teacher {
+  background-color: var(--color-off-white, #FAF8F5);
+}
+
+.teacher .photo, .teacher .avatarPlaceholder {
+  border-radius: var(--radius-md, 10px);
+}

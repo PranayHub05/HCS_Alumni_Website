@@ -1,0 +1,121 @@
+.galleryPage {
+  min-height: 100vh;
+  background-color: var(--color-off-white);
+}
+
+.hero {
+  height: 35vh;
+  min-height: 300px;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--header-height);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-xl);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  color: var(--color-muted-text);
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-base);
+}
+
+.tab:hover {
+  color: var(--color-primary);
+}
+
+.activeTab {
+  color: var(--color-primary);
+  font-weight: var(--fw-semibold);
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-gold);
+  border-radius: var(--radius-full) var(--radius-full) 0 0;
+}
+
+.filterSection {
+  margin-bottom: var(--space-2xl);
+  background: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.resultCount {
+  margin-top: var(--space-md);
+  font-size: var(--fs-small);
+  color: var(--color-muted-text);
+  text-align: right;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-4xl) 0;
+  color: var(--color-muted-text);
+  font-size: var(--fs-body-lg);
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .content {
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  .tabs {
+    gap: var(--space-md);
+  }
+  
+  .tab {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--fs-body-lg);
+  }
+}

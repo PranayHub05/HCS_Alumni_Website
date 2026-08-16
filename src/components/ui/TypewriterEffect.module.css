@@ -1,0 +1,26 @@
+.typewriter {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: var(--fs-body, 1.125rem);
+  font-style: italic;
+  color: var(--color-white, #ffffff);
+  display: inline-block;
+  min-height: 1.5em; /* Prevent layout shift */
+}
+
+@media (min-width: 768px) {
+  .typewriter {
+    font-size: var(--fs-h4, 1.25rem);
+  }
+}
+
+.cursor {
+  color: var(--color-gold, #C9A84C);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

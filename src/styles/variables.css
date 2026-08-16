@@ -1,0 +1,137 @@
+/* ============================================
+   HCS Alumni Association — Design Tokens
+   ============================================ */
+
+:root {
+  /* ── Primary Palette ── */
+  --color-primary: #6B1D2A;
+  --color-primary-dark: #4A0E1C;
+  --color-primary-light: #8B3A4A;
+  --color-primary-rgb: 107, 29, 42;
+
+  /* ── Gold Accent ── */
+  --color-gold: #C9A84C;
+  --color-gold-dark: #A68A3A;
+  --color-gold-light: #E8D48B;
+  --color-gold-rgb: 201, 168, 76;
+
+  /* ── Neutrals ── */
+  --color-off-white: #FAF8F5;
+  --color-cream: #F5F0EB;
+  --color-light-grey: #E8E4DF;
+  --color-mid-grey: #9A9590;
+  --color-dark-text: #1A1A1A;
+  --color-body-text: #3D3D3D;
+  --color-muted-text: #6B6B6B;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* ── Semantic ── */
+  --color-success: #2E7D32;
+  --color-success-light: #E8F5E9;
+  --color-warning: #F57F17;
+  --color-warning-light: #FFF8E1;
+  --color-error: #C62828;
+  --color-error-light: #FFEBEE;
+  --color-info: #1565C0;
+  --color-info-light: #E3F2FD;
+
+  /* ── Status Badges ── */
+  --color-pending: #F57F17;
+  --color-in-progress: #1565C0;
+  --color-completed: #2E7D32;
+  --color-urgent: #C62828;
+
+  /* ── Typography ── */
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --fs-hero: clamp(2.4rem, 5vw, 4rem);
+  --fs-h1: clamp(2rem, 4vw, 3rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2.25rem);
+  --fs-h3: clamp(1.25rem, 2.5vw, 1.75rem);
+  --fs-h4: 1.25rem;
+  --fs-body: 1rem;
+  --fs-body-lg: 1.125rem;
+  --fs-small: 0.875rem;
+  --fs-xs: 0.75rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.05em;
+  --ls-extra-wide: 0.15em;
+
+  /* ── Spacing ── */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* ── Layout ── */
+  --container-max: 1200px;
+  --container-wide: 1400px;
+  --container-narrow: 800px;
+  --header-height: 80px;
+  --sidebar-width: 280px;
+
+  /* ── Borders ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 50%;
+  --border-thin: 1px solid var(--color-light-grey);
+  --border-gold: 2px solid var(--color-gold);
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.06);
+  --shadow-gold: 0 4px 20px rgba(201, 168, 76, 0.25);
+  --shadow-primary: 0 4px 20px rgba(107, 29, 42, 0.25);
+  --shadow-card-hover: 0 12px 36px rgba(0, 0, 0, 0.12), 0 6px 12px rgba(0, 0, 0, 0.06);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Glassmorphism ── */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-dark: rgba(0, 0, 0, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-blur: blur(20px);
+
+  /* ── Z-Index Scale ── */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+}
+
+/* ── Breakpoints (as media queries) ── */
+/* Mobile:  < 576px */
+/* Tablet:  576px – 992px */
+/* Desktop: > 992px */
+/* Wide:    > 1400px */

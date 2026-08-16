@@ -1,0 +1,210 @@
+.pageContainer {
+  min-height: 100vh;
+  background-color: var(--color-off-white);
+  padding-bottom: var(--space-4xl);
+}
+
+.heroSection {
+  height: 35vh;
+  min-height: 300px;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(201, 168, 76, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.mainContent {
+  margin-top: calc(var(--space-2xl) * -1);
+  position: relative;
+  z-index: 10;
+}
+
+.filterSection {
+  background: var(--color-white);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-xl);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filterSection::-webkit-scrollbar {
+  display: none;
+}
+
+.tabsContainer {
+  display: flex;
+  gap: var(--space-sm);
+  min-width: max-content;
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  color: var(--color-muted-text);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: var(--fs-small);
+}
+
+.tabBtn:hover {
+  color: var(--color-primary);
+  background: var(--color-cream);
+}
+
+.activeTab {
+  background: var(--color-gold);
+  color: var(--color-dark-text);
+}
+
+.activeTab:hover {
+  background: var(--color-gold-dark);
+  color: var(--color-white);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-4xl) var(--space-md);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  color: var(--color-muted-text);
+  font-size: var(--fs-body-lg);
+  border: 1px dashed var(--color-light-grey);
+}
+
+.sectionHeader {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.pinnedSection {
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border-left: 4px solid var(--color-gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.cardWrapper {
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+
+.cardWrapper:hover {
+  transform: translateY(-2px);
+}
+
+.modalContent {
+  padding: var(--space-md) 0;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.categoryBadge {
+  padding: var(--space-2xs) var(--space-sm);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--color-light-grey);
+  color: var(--color-dark-text);
+}
+
+.modalDate {
+  color: var(--color-muted-text);
+  font-size: var(--fs-small);
+}
+
+.modalTitle {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+}
+
+.modalImageContainer {
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modalText {
+  color: var(--color-body-text);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+.modalText p {
+  margin-bottom: var(--space-md);
+}
+
+.modalText p:last-child {
+  margin-bottom: 0;
+}
+
+.loadingContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-off-white);
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: auto;
+    padding: var(--space-3xl) 0 var(--space-4xl);
+  }
+  
+  .filterSection {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .pinnedSection {
+    padding: var(--space-md);
+  }
+}
