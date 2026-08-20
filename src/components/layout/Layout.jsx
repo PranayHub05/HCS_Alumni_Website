@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <main style={{ flex: 1, paddingTop: 'var(--header-height, 80px)' }}>
+      <main style={{ flex: 1 }}>
         {children || <Outlet />}
       </main>
       <Footer />

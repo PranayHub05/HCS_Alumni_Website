@@ -40,9 +40,9 @@ function NotFound() {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      minHeight: '60vh',
+      minHeight: '70vh',
       textAlign: 'center',
-      padding: '2rem',
+      padding: 'calc(var(--header-height, 80px) + 3rem) 2rem 3rem',
     }}>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--fs-hero)', color: 'var(--color-primary)' }}>
         404
