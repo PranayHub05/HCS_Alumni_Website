@@ -5,13 +5,20 @@ import { isFirebaseConfigured } from './firebase';
 
 export const signInAdmin = async (email, password) => {
   if (!isFirebaseConfigured()) {
-    // Demo mode: accept any credentials
-    console.info('[Auth] Demo mode — simulating login');
-    return {
-      uid: 'demo-admin',
-      email: email || 'admin@hcsalumni.org',
-      displayName: 'Demo Admin',
-    };
+    const trimmedEmail = (email || '').trim().toLowerCase();
+    const isValidUser = trimmedEmail === 'admin' || trimmedEmail === 'admin@hcsalumni.org' || trimmedEmail === 'admin@hcs.com';
+    const isValidPass = (password || '') === 'admin@HCSAA';
+
+    if (isValidUser && isValidPass) {
+      console.info('[Auth] Admin authentication successful');
+      return {
+        uid: 'admin-hcs',
+        email: email,
+        displayName: 'HCS Admin',
+      };
+    } else {
+      throw new Error('Invalid email or password. Please try again.');
+    }
   }
 
   const { getAuth, signInWithEmailAndPassword } = await import('firebase/auth');

@@ -49,10 +49,11 @@ export default function AdminLogin() {
         
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={shared.formGroup}>
-            <label className={shared.formLabel}>Email</label>
+            <label className={shared.formLabel}>Email / Username</label>
             <input 
-              type="email" 
+              type="text" 
               className={shared.formInput} 
+              placeholder="e.g. admin"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required 
